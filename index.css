@@ -7,6 +7,7 @@
     margin: 0 auto; /* Centers the image horizontally if it's inside a container */
 }
 
+
 .background-video {
   position: fixed;
   top: 0;
@@ -38,6 +39,11 @@
   color: green;
 }
 
+.error-message {
+    font-size: 1.5em;
+    color: red;
+}
+
 #background-video {
   position: absolute;
   top: 50%;
@@ -57,16 +63,34 @@
   padding-top: 100px; /* Adjust based on your layout needs */
 }
 
-#form {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
+input{
+    width: 20%;
+    min-width: 150px;
+    padding: 12px;
+    margin: 3px 0;
 }
 
-label,
-input,
-button {
-  display: block;
-  margin: 10px auto;
+input:hover {
+    box-shadow: 2px 2px 5px rgba(214, 213, 206, 0.94);
+}
+
+button[type="submit"] {
+    background-color: rgb(31, 33, 33);
+    width: 180px;
+    display: block;
+    margin: 0px auto;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(45, 10, 70);
 }

@@ -7,7 +7,7 @@
 
     <div class="video-background">
       <video autoplay muted loop id="background-video">
-        <source src="media/BicesterHeritage.mp4" type="video/mp4" />
+        <source src="media/BCC2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -16,17 +16,20 @@
     </div>
     <div class="content">
       <img class="logo" src="logo/logo-no-background.png" />
+
       <h4>Join our Waitlist</h4>
       <form id="form" onsubmit="submitForm(event)">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br /><br />
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required /><br /><br />
+        <input type="email" id="email" name="email" placeholder="Your e-mail" required /><br /><br />
+        <input type="text" id="name" name="name" placeholder="Your Name" required /><br /><br />
+        <input type="text" id="model" name="model" placeholder="Your Car Model" required/><br /><br />
         <button type="submit">Submit</button>
       </form>
 
       <div id="success-message" class="hidden success-message">
         Thank you for joining our waitlist!
+      </div>
+      <div id="error-message" class="hidden error-message">
+        Something has gone wrong. Try again shortly!
       </div>
     </div>
   </body>

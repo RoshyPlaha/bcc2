@@ -1,5 +1,28 @@
-.logo-container {
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevents horizontal scroll if the background image is larger */
 }
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background is behind other content */
+    overflow: hidden; /* Ensures the background doesn't create scrollbars */
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire background area */
+    object-position: center; /* Center the image */
+    display: block;
+}
+
 .logo {
     max-width: 10%; /* Ensures the image scales down proportionally based on the container's width */
     height: auto;   /* Maintains the aspect ratio of the image */
@@ -7,16 +30,6 @@
     margin: 0 auto; /* Centers the image horizontally if it's inside a container */
 }
 
-
-.background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
 
 .header-bar {
     position: absolute;
@@ -27,7 +40,11 @@
     height: 50px;
     background-color: white;
     text-align: center; /* Center the content inside the header-bar */
-    align-items: center; /* Center content vertically */
+}
+
+.links {
+    position: relative;
+    top: 10px;
 }
 
 .hidden {
@@ -36,7 +53,7 @@
 
 .success-message {
   font-size: 1.5em;
-  color: green;
+  color: rgb(255, 255, 255);
 }
 
 .error-message {
@@ -44,16 +61,6 @@
     color: red;
 }
 
-#background-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  object-fit: cover; /* Makes the video cover the whole screen */
-}
 
 .content {
   position: relative;

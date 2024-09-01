@@ -3,11 +3,9 @@ async function submitForm(event) {
 
     const email = document.getElementById('email').value;
     const name = document.getElementById('name').value;
-    const model = document.getElementById('model').value;
-
 
     console.log('submitting now');
-    const http_status = await storeResult(email, name, model)
+    const http_status = await storeResult(email, name)
 
     if (http_status == 200) {
         positiveFeedback()
@@ -26,14 +24,14 @@ function negativeFeedback() {
     document.getElementById('error-message').classList.remove('hidden');
 }
 
-async function storeResult(email, name, model) {
+async function storeResult(email, name) {
 
     const lambdaFunctionUrl = 'https://pbaf7nnsesl5paxyda34j4u5wm0bjjdx.lambda-url.us-east-1.on.aws/';
 
     const data = {
         email: email,
         name: name,
-        car_make_model: model,
+        car_make_model: 'none',
         date: "20240906"
     };
 

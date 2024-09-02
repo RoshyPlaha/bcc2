@@ -151,6 +151,8 @@ a.link-style {
   }
   button {
     min-width: 80%;
+    min-height: 15%;
+    font-size: 3em;
   }
   .description {
     min-width: 90%;
@@ -185,6 +187,7 @@ a.link-style {
   button {
     min-width: 80%;
     min-height: 15%;
+    font-size: 3em;
   }
   .waitlist-text {
     font-size: 2.5em;

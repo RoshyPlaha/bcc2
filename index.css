@@ -136,21 +136,13 @@ a.link-style {
   }
   input,
   textarea {
-    min-width: 60%;
+    min-width: 80%;
     padding: 12px;
     margin: 3px 0;
+    font-size: xx-large;
   }
-}
-
-@media (max-width: 1000px) {
-  .logo {
-    min-width: 30%; /* Scale down the logo proportionally on larger screens */
-  }
-  input,
-  textarea {
-    min-width: 60%;
-    padding: 12px;
-    margin: 3px 0;
+  button {
+    min-width: 80%
   }
 }
 
@@ -163,11 +155,15 @@ a.link-style {
     min-width: 80%;
     padding: 12px;
     margin: 3px 0;
+    font-size: xx-large;
   }
   .about-us {
     min-width: 80%;
   }
   .description {
     min-width: 80%;
+  }
+  button {
+    min-width: 80%
   }
 }

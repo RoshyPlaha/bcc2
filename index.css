@@ -31,6 +31,16 @@ html {
   margin: 0 auto; /* Centers the image horizontally if it's inside a container */
 }
 
+.waitlist-holder {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.waitlist-text {
+  font-size: medium;
+  font-weight: 1000;
+}
+
 input,
 textarea {
   min-width: 30%;
@@ -62,7 +72,7 @@ textarea {
 .success-message {
   font-size: 1.5em;
   color: rgb(255, 255, 255);
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 .error-message {
@@ -101,13 +111,10 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color:#380009;
+  background-color: #380009;
 }
 
-.about-us {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-}
+
 
 h4 {
   font-size: 1.5em;
@@ -142,7 +149,13 @@ a.link-style {
     font-size: 3em;
   }
   button {
-    min-width: 80%
+    min-width: 80%;
+  }
+  .waitlist-text {
+    font-size: 2.5em;
+  }
+  .links {
+    font-size: 2em;
   }
 }
 
@@ -155,7 +168,7 @@ a.link-style {
     min-width: 80%;
     padding: 12px;
     margin: 3px 0;
-    font-size: 2.5em;
+    font-size: 3em;
   }
   .about-us {
     min-width: 80%;
@@ -166,5 +179,11 @@ a.link-style {
   button {
     min-width: 80%;
     min-height: 15%;
+  }
+  .waitlist-text {
+    font-size: 2.5em;
+  }
+  .links {
+    font-size: 2em;
   }
 }

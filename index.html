@@ -39,7 +39,9 @@
     <div class="content">
       <img class="logo" src="logo/logo-no-background.png" />
 
-      <h4>Join our Waitlist</h4>
+      <div class="waitlist-holder">
+        <text class="waitlist-text">Join our Waitlist</text>
+      </div>
       <form id="form" onsubmit="submitForm(event)">
         <input
           type="email"
@@ -66,10 +68,10 @@
       </form>
 
       <div id="success-message" class="hidden success-message">
-        Thank you for joining our waitlist!
+        <h1>Thank you for joining our waitlist!</h1>
       </div>
       <div id="error-message" class="hidden error-message">
-        Something has gone wrong. Try again shortly!
+        <h1>Something has gone wrong. Try again shortly!</h1>
       </div>
     </div>
   </body>

@@ -3,9 +3,10 @@ async function submitForm(event) {
 
     const email = document.getElementById('email').value;
     const name = document.getElementById('name').value;
+    const notes = document.getElementById('notes').value;
 
     console.log('submitting now');
-    const http_status = await storeResult(email, name)
+    const http_status = await storeResult(email, name, notes)
 
     if (http_status == 200) {
         positiveFeedback()
@@ -24,15 +25,24 @@ function negativeFeedback() {
     document.getElementById('error-message').classList.remove('hidden');
 }
 
-async function storeResult(email, name) {
+function getCurrentDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const day = String(today.getDate()).padStart(2, '0');
+
+    return `${year}-${month}-${day}`;
+}
+
+async function storeResult(email, name, notes) {
 
     const lambdaFunctionUrl = 'https://pbaf7nnsesl5paxyda34j4u5wm0bjjdx.lambda-url.us-east-1.on.aws/';
 
     const data = {
         email: email,
         name: name,
-        car_make_model: 'none',
-        date: "20240906"
+        notes: notes,
+        date: getCurrentDate()
     };
 
     console.log('data packet is: ', data)

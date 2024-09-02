@@ -130,6 +130,7 @@ h4 {
   color: black;
   border-radius: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
 }
 
 a.link-style {
@@ -150,6 +151,10 @@ a.link-style {
   }
   button {
     min-width: 80%;
+  }
+  .description {
+    min-width: 90%;
+    font-size: 2.5em;
   }
   .waitlist-text {
     font-size: 2.5em;
@@ -174,7 +179,8 @@ a.link-style {
     min-width: 80%;
   }
   .description {
-    min-width: 80%;
+    min-width: 90%;
+    font-size: 2.5em;
   }
   button {
     min-width: 80%;
